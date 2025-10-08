@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Mi Sitio Web</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="menu">
+      <a href="index.html">Principal</a>
+      <a href="about.html">Sobre Nosotros</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <h1>Bienvenido a mi sitio web</h1>
+      <p>Este es un trabajo práctico integrador de Desarrollo Web I.</p>
+    </section>
+
+    <section class="carousel-container">
+      <h2>Nuestros Productos</h2>
+      <div class="carousel">
+        <button class="carousel-btn prev" onclick="prevImage()">❮</button>
+        <img id="carousel-image" src="src/img/img1.jpg" alt="Imagen 1">
+        <button class="carousel-btn next" onclick="nextImage()">❯</button>
+      </div>
+    </section>
+
+    <section class="article">
+      <h2>Información General</h2>
+      <div class="columns">
+        <div class="column">
+          <h3>Producto 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+        <div class="column">
+          <h3>Producto 2</h3>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div class="column">
+          <h3>Producto 3</h3>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="src/script.js"></script>
+</body>
+
+</html>
