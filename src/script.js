@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </head>
                 <body>
                     <div class="container">
-                        <h1>✅ ¡Mensaje enviado con éxito!</h1>
+                        <h1>¡Mensaje enviado con éxito!</h1>
                         <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>
                         <p><strong>Email:</strong> ${escapeHtml(email)}</p>
                         <p><strong>Teléfono:</strong> ${escapeHtml(phone)}</p>
@@ -103,10 +103,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function isValidPhone(phone) {
-
-    const re = /^[\+]?[0-9]{2,4}[\s]?[9]?[\s]?[0-9]{3,4}[\s\-]?[0-9]{6,8}$/
-    return re.test(phone.replace(/[\s\-\.()]/g, '').length >= 10) && /[0-9]{6}/.test(phone)
-  
+    const cleanPhone = phone.replace(/[\s\-\.()]/g, '')
+    const re = /^(\+?54)?9?\d{10}$/
+    return re.test(cleanPhone) && cleanPhone.length >= 10
   }
 
   function escapeHtml(text) {
