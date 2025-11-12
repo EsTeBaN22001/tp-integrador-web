@@ -103,9 +103,10 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function isValidPhone(phone) {
-    // Simple phone validation: at least 7 digits, allows spaces, dashes, parentheses
-    const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
-    return re.test(phone)
+
+    const re = /^[\+]?[0-9]{2,4}[\s]?[9]?[\s]?[0-9]{3,4}[\s\-]?[0-9]{6,8}$/
+    return re.test(phone.replace(/[\s\-\.()]/g, '').length >= 10) && /[0-9]{6}/.test(phone)
+  
   }
 
   function escapeHtml(text) {
